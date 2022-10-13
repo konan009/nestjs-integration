@@ -39,12 +39,12 @@ export class DatabaseService {
       date: new Date()
     }, {
       _id: '4',
-      text: 'I am the blood of the dragon.',
+      text: 'I am going to break the wheel.',
       user: 'daenerys',
       date: new Date()
     }, {
       _id: '5', 
-      text: 'A girl is Arya Stark of Winterfell. And I\'m going home.',
+      text: 'The North Remembers',
       user: 'arya',
       date: new Date()
     }];
@@ -84,9 +84,6 @@ export class DatabaseService {
         }
       }
     });
-
-
-
     console.log(testss);
   }
 
