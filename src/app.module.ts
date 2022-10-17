@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule,ConfigService } from '@nestjs/config';
 import * as Joi from 'joi';
 import { DatabaseModule } from './database/database.module';
+import { RmqMessageModule } from './rmq-message/rmq-message.module';
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import { DatabaseModule } from './database/database.module';
         ELASTICSEARCH_NODE: Joi.string().required(),
         ELASTICSEARCH_INDEX: Joi.string().required(),
       }),
-    }), DatabaseModule
+    }), DatabaseModule,RmqMessageModule
   ],
   controllers: [AppController],
   providers: [AppService,ConfigService],
